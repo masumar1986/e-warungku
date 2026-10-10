@@ -78,5 +78,17 @@ label{font-size:13px;font-weight:700;margin:.6rem 0 .25rem;display:block}
 .auth-card .brand-img{max-height:60px}
 .logo-prev{min-height:70px;display:flex;align-items:center;padding:.75rem;border:1px dashed var(--bd);border-radius:12px;background:var(--bg)}
 .logo-prev .brand-img{max-height:80px}
+#netbar{position:fixed;top:0;left:0;height:3px;width:35%;background:linear-gradient(90deg,var(--cy),var(--yl));z-index:5000;opacity:0;pointer-events:none;transition:opacity .15s}
+#netbar.on{opacity:1;animation:netgo 1.3s ease-in-out infinite}
+@keyframes netgo{0%{transform:translateX(-100%)}100%{transform:translateX(300%)}}
+.skel-wrap{display:flex;flex-direction:column;gap:.75rem}
+.skel{border-radius:16px;background:linear-gradient(90deg,var(--card) 25%,var(--bd) 37%,var(--card) 63%);background-size:400% 100%;animation:skel 1.2s ease infinite}
+@keyframes skel{0%{background-position:100% 50%}100%{background-position:0 50%}}
+.scanbox{margin-bottom:.9rem}
+.scan-info{min-height:1.5em;font-size:13px;font-weight:700;margin-top:.3rem}.scan-info.ok{color:var(--ok)}.scan-info.bad{color:var(--bad)}
+.cam{margin-top:.5rem}.cam [id^=camView]{width:100%;max-width:440px;border-radius:12px;overflow:hidden}
+.line.flash{animation:flashln .9s ease}
+@keyframes flashln{0%{background:var(--yl)}100%{background:transparent}}
+kbd{background:var(--bg);border:1px solid var(--bd);border-bottom-width:2px;border-radius:6px;padding:0 .35rem;font-size:11px;color:var(--tx)}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 @media print{body *{visibility:hidden}#invBox,#invBox *{visibility:visible}#invBox{position:absolute;left:0;top:0;width:100%;color:#000}}
